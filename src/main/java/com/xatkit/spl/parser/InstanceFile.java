@@ -71,7 +71,7 @@ public class InstanceFile {
         myWriter.write("import static com.xatkit.dsl.DSL.model;\n");
         myWriter.write("import static com.xatkit.dsl.DSL.state;\n\n");
 
-        myWriter.write("public class XatkitBotInstance {\n\n");
+        myWriter.write("public class " + BOT_NAME + " {\n\n");
         myWriter.write("    public static void main(String[] args) {\n\n");
 
         for (int i = 0; i < BOT_INTENTS_TITLES.size(); i++) {
@@ -96,7 +96,7 @@ public class InstanceFile {
 
         myWriter.write("\n        init\n");
         myWriter.write("            .next()\n");
-        myWriter.write("            .when(eventIs(reactEventProvider.getClientReady())).moveTo(awaitingInput);\n\n");
+        myWriter.write("            .when(eventIs(ReactEventProvider.ClientReady)).moveTo(awaitingInput);\n\n");
 
         myWriter.write("        awaitingInput\n");
         myWriter.write("            .next()\n");

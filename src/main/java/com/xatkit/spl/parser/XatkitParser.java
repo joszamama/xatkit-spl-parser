@@ -13,7 +13,7 @@ public class XatkitParser
         // String path = ".\\src\\bots\\ExampleBot\\ExampleBot";
         // InstanceFile.compile(path);
 
-        String path = ".\\src\\bots\\ExampleBot\\ExampleBot";
+        String path = "../xatkit-spl-parser/src/bots/ExampleBot/ExampleBot";
         InstanceFile.compile(path);
     }
 }
