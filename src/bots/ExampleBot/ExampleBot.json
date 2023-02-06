@@ -1,6 +1,6 @@
 {
-    "name": "ISA BOT",
-    "description": "Bot informativo de alumnos del ISA",
+    "name": "ProfeBOT",
+    "description": "Bot informativo de profesores",
     "fallback": "No dispongo de información relacionada, siento las molestias.",
     "intents": [
       {
@@ -11,7 +11,7 @@
           "Mariano",
           "¿Qué horarios tiene Mariano?"
         ],
-        "response": "Mariano Torrado es alumno del ISA y trabaja en el despacho XX.XX, con horarios de tutoría de 16.00 a 16.01"
+        "response": "Mariano Torrado trabaja en el despacho XX.XX, con horarios de tutoría de 16.00 a 16.01"
       },
       {
         "title": "Alumno Carlos",
@@ -21,7 +21,7 @@
           "Carlos",
           "¿Qué horarios tiene Carlos?"
         ],
-        "response": "Carlos Núñez es alumno del ISA y trabaja en el despacho XX.XX, con horarios de tutoría de 16.00 a 16.01"
+        "response": "Carlos Núñez trabaja en el despacho XX.XX, con horarios de tutoría de 16.00 a 16.01"
       }
     ]
   }
