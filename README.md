@@ -55,18 +55,25 @@ To get a local copy up and running follow these simple example steps.
 
 To run and test this project locally, you must have Maven, Java JDK +8 and Git installed. If you just want to consume the project independently, you can create a Dockerfile with the following instructions:
 
+```sh
+RUN echo ${CHATBOT_DEFINITION} > /app/xatkit-spl-parser/src/bots/${CHATBOT_NAME}/${CHATBOT_NAME}.json
+RUN mvn clean compile
+RUN mvn exec:java -e -Dexec.mainClass="com.xatkit.spl.parser.XatkitParser" -Dexec.args="/app/xatkit-main/xatkit-spl-parser/src/bots/${CHATBOT_NAME}/${CHATBOT_NAME}"
+```
+(Where ${CHATBOT_DEFINITION} is the JSON that will be copied into ./src/bots/CHATBOT_NAME)
+
 ### Installation
 
-1. Clone the repo
+1. Clone the repo:
    ```sh
    git clone https://github.com/joszamama/xatkit-spl-parser.git
    ```
-2. Install the Maven dependencies
+2. Install the Maven dependencies:
    ```sh
    cd xatkit-spl-parser
    mvn clean compile
    ```
-3. Añade el JSON de tu chatbot a la carpeta ./src/bots y ejecuta la siguiente instrucción:
+3. Add the JSON of your chatbot to the folder ./src/bots and execute the following command:
    ```js
    mvn exec:java -e -Dexec.mainClass="com.xatkit.spl.parser.XatkitParser" -Dexec.args="./src/bots/JSON_FILE"
    ```
