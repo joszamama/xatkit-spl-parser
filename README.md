@@ -100,6 +100,6 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the EPL-2.0 license. See `LICENSE.txt` for more information.
+Distributed under the EPL-2.0 license. See `LICENSE.md` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
