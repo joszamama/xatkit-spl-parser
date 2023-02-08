@@ -13,12 +13,8 @@ public class XatkitParser
         // String path = ".\\src\\bots\\ExampleBot\\ExampleBot";
         // InstanceFile.compile(path);
 
-        String path;
-        if (args.length == 0) {
-            System.out.println("No path provided as argument. Please provide a path to the Xatkit-SPL file to parse.");
-        } else {
-            path = args[0];
+
+            String path = ".\\src\\bots\\ExampleBot\\ExampleBot";
             InstanceFile.compile(path);
         }
     }
-}

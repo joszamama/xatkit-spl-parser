@@ -25,7 +25,8 @@ public class InstanceFile {
      * @return void: It creates a .java file with the same name as the JSON file
      */
     public static void compile(String path) {
-        try {   
+        try {
+            System.out.println("Parsing Xatkit-SPL file at " + path);
             JSONParser parser = new JSONParser();
             JSONObject chatbot = (JSONObject) parser.parse(new BufferedReader(new InputStreamReader(new FileInputStream(path + ".json"), "UTF-8")));
 
