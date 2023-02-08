@@ -13,8 +13,11 @@ public class XatkitParser
         // String path = ".\\src\\bots\\ExampleBot\\ExampleBot";
         // InstanceFile.compile(path);
 
-
-            String path = ".\\src\\bots\\ExampleBot\\ExampleBot";
+        if (args.length == 0) {
+            System.out.println("No path provided, please provide a path to the JSON file");
+        } else {
+            String path = args[0];
             InstanceFile.compile(path);
         }
     }
+}
