@@ -27,6 +27,19 @@ public class InstanceFile {
     public static void compile(String path) {
         try {
             System.out.println("Parsing Xatkit-SPL file at " + path);
+            // Check if folder exists
+            if (!Files.exists(Paths.get(path.substring(0, path.lastIndexOf("/"))))) {
+                System.out.println("Folder " + path.substring(0, path.lastIndexOf("/")) + " does not exist");
+                return;
+            } else {
+                System.out.println("Folder " + path.substring(0, path.lastIndexOf("/")) + " exists");
+                if (!Files.exists(Paths.get(path + ".json"))) {
+                    System.out.println("File " + path + ".json does not exist");
+                    return;
+                } else {
+                    System.out.println("File " + path + ".json exists");
+                }
+            }
             JSONParser parser = new JSONParser();
             JSONObject chatbot = (JSONObject) parser.parse(new BufferedReader(new InputStreamReader(new FileInputStream(path + ".json"), "UTF-8")));
 
