@@ -16,14 +16,14 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-One of the main features I have been missing in Xatkit has been to be able to create basic chatbots in a simple way, making API calls, or using a standardized format such as JSON for the definition of a chatbot. This can make the barrier of entry to the project much more friendly.
+One of the main features I have been missing in Xatkit has been to be able to create basic chatbots in a simple way, making API calls, or using a standardized format such as JSON for the definition of a chatbot. This can make the entry to the project much more friendly.
 
 Here's why:
 * I don't need to fully understand how to work the Fluent definition or the internal DSL that Xatkit employs when designing a chatbot.
 * I don't need to install project dependencies such as Maven, JDK, Git... in order to run a chatbot, whose internal technology is transparent to the standard user.
 * I don't need to learn Java to be able to create a chatbot, whose internal technology is transparent to the standard user.
 
-Of course it is important to know all these technologies, but only if I want to contribute to the project by collaborating. A standard user does not have to know about all these topics, and can make potential users remain potential users. For this, I have designed a JSON parser to Xatkit Chatbot Java Definition (XCJD) so that from any web service, using a standardized and visual language like JSON that is also compatible with any web application, you can create the Java file that you will then run to raise your amazing chatbot.
+Of course it is important to know all these technologies, but only if I want to contribute to the project by collaborating. A standard user does not have to know about all these topics, and can make potential users remain potential users. For this, I have designed a JSON parser to Xatkit Chatbot Java Definition (XCJD) so that from any web service, using a standardized and visual language like JSON that is also compatible with any web application, you can create the Java file that you will then run to create your amazing chatbot.
 
 The main goal is to consume this project from any other project where you want to use this parser. Specifically, for Xatkit-SPL-Backend, we have added this project as a submodule and when the user creates his Chatbot from the interface in a simple and visual way, this generates the JSON that will be transformed into XCJD.
 
