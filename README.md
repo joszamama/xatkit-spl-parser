@@ -33,8 +33,6 @@ The main goal is to consume this project from any other project where you want t
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-
 * [Java](https://www.java.com/es/)
 * [Maven](https://maven.apache.org/)
 * [JSON Parser](https://docs.oracle.com/javaee/7/api/javax/json/stream/JsonParser.html)
@@ -47,9 +45,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 <!-- GETTING STARTED -->
 ## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
