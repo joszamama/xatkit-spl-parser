@@ -145,7 +145,7 @@ public class InstanceFile {
         myWriter.write("        botConfiguration.addProperty(\"xatkit.intent.provider\", \"com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider\");\n");
         myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.AGENT_ID_KEY, \"default\");\n");
         myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.LANGUAGE_CODE_KEY, \"en\");\n");
-        myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.NLPJS_SERVER_KEY, \"host.docker.internal:8080\");\n");
+        myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.NLPJS_SERVER_KEY, \"http://host.docker.internal:8080\");\n");
 
         myWriter.write("        XatkitBot xatkitBot = new XatkitBot(botModel, botConfiguration);\n");
         myWriter.write("        xatkitBot.run();\n");
