@@ -83,6 +83,8 @@ public class InstanceFile {
         myWriter.write("import static com.xatkit.dsl.DSL.intent;\n");
         myWriter.write("import static com.xatkit.dsl.DSL.intentIs;\n");
         myWriter.write("import static com.xatkit.dsl.DSL.model;\n");
+        myWriter.write("import com.xatkit.core.recognition.nlpjs.*;\n");
+
         myWriter.write("import static com.xatkit.dsl.DSL.state;\n\n");
 
         myWriter.write("public class " + BOT_NAME + " {\n\n");
@@ -140,6 +142,11 @@ public class InstanceFile {
         myWriter.write("            .defaultFallbackState(defaultFallback);\n\n");
         
         myWriter.write("        Configuration botConfiguration = new BaseConfiguration();\n");
+        myWriter.write("        botConfiguration.addProperty(\"xatkit.intent.provider\", \"com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider\");\n");
+        myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.AGENT_ID_KEY, \"default\");\n");
+        myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.LANGUAGE_CODE_KEY, \"en\");\n");
+        myWriter.write("        botConfiguration.addProperty(NlpjsConfiguration.NLPJS_SERVER_KEY, \"http://localhost:8080\");\n");
+
         myWriter.write("        XatkitBot xatkitBot = new XatkitBot(botModel, botConfiguration);\n");
         myWriter.write("        xatkitBot.run();\n");
         

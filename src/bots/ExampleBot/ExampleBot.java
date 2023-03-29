@@ -13,6 +13,7 @@ import static com.xatkit.dsl.DSL.fallbackState;
 import static com.xatkit.dsl.DSL.intent;
 import static com.xatkit.dsl.DSL.intentIs;
 import static com.xatkit.dsl.DSL.model;
+import com.xatkit.core.recognition.nlpjs.*;
 import static com.xatkit.dsl.DSL.state;
 
 public class ProfeBOT {
@@ -70,6 +71,10 @@ public class ProfeBOT {
             .defaultFallbackState(defaultFallback);
 
         Configuration botConfiguration = new BaseConfiguration();
+        botConfiguration.addProperty("xatkit.intent.provider", "com.xatkit.core.recognition.nlpjs.NlpjsIntentRecognitionProvider");
+        botConfiguration.addProperty(NlpjsConfiguration.AGENT_ID_KEY, "default");
+        botConfiguration.addProperty(NlpjsConfiguration.LANGUAGE_CODE_KEY, "en");
+        botConfiguration.addProperty(NlpjsConfiguration.NLPJS_SERVER_KEY, "http://localhost:8080");
         XatkitBot xatkitBot = new XatkitBot(botModel, botConfiguration);
         xatkitBot.run();
     }
